@@ -1,0 +1,27 @@
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import LandingPage from './components/views/LandingPage/LandingPage.js'
+import LoginPage from './components/views/LoginPage/LoginPage'
+import Register from './components/views/RegisterPage/RegisterPage'
+
+function App() {
+  return (
+    <Router>
+      <div> 
+        <Switch>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path="/login" component={LoginPage}/>
+          <Route exact path="/register" component={Register}/>
+        </Switch>
+      </div>
+    </Router>
+  )
+}
+
+
+
+export default App
